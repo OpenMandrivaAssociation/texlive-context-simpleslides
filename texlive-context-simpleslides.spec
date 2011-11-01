@@ -1,0 +1,116 @@
+Name:		texlive-context-simpleslides
+Version:	20091103
+Release:	1
+Summary:	A module for preparing presentations
+Group:		Publishing
+URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simpleslides
+License:	GPL
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-simpleslides.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-simpleslides.doc.tar.xz
+BuildArch:	noarch
+BuildRequires:	texlive-tlpkg
+Requires(post):	texlive-tlpkg
+Requires:	texlive-context
+Conflicts:	texlive-texmf <= 20110705-3
+Conflicts:	texlive-doc <= 20110705-3
+Requires(post):	texlive-context.bin
+
+%description
+This Context module provides an easy-to-use interface for
+creating presentations for use with a digital projector. The
+presentations are not interactive (no buttons, hyperlinks or
+navigational tools such as tables of contents). Graphics may be
+mixed with the text of slides. The module provides several
+predefined styles, designed for academic presentation. Most
+styles are configurable, and it is easy to design new styles.
+
+%pre
+    %_texmf_mtxrun_pre
+    %_texmf_mktexlsr_pre
+
+%post
+    %_texmf_mtxrun_post
+    %_texmf_mktexlsr_post
+
+%preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mtxrun_pre
+	%_texmf_mktexlsr_pre
+    fi
+
+%postun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mtxrun_post
+	%_texmf_mktexlsr_post
+    fi
+
+#-----------------------------------------------------------------------
+%files
+%{_texmfdistdir}/tex/context/interface/third/t-simpleslides.xml
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-c-default.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-f-default.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-BigNumber.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-BottomSquares.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Boxed.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-BoxedTitle.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Ellipse.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Embossed.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Framed.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-FramedTitle.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-HorizontalStripes.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-NarrowStripes.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-PlainCounter.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-RainbowStripe.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Rounded.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Shaded.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-SideSquares.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-SideToc.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Split.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Sunrise.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Swoosh.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-ThickStripes.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-default.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/t-simpleslides.tex
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/example.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/example.tex
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/simpleslides.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/simpleslides.tex
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/solutions/generic-talk-15min-45min.tex
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/solutions/speaker_introduction-2min.tex
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/solutions/style-template.tex
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/BigNumber-blue.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/BigNumber-red.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/BottomSquares.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Boxed.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Ellipse.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Embossed.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Framed-square.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Framed-stripe.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/FramedTitle.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/HorizontalStripes-blue.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/HorizontalStripes-green.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/HorizontalStripes-red.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/NarrowStripes-blue.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/NarrowStripes-green.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/NarrowStripes-red.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/RainbowStripe.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Rounded.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Shaded-blue.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Shaded-bluered.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Shaded-green.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/SideSquares.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/SideToc.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Split.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Sunrise.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Swoosh.pdf
+%doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/ThickStripes.pdf
+
+#-----------------------------------------------------------------------
+%prep
+%setup -c -a0 -a1
+
+%build
+
+%install
+mkdir -p %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
