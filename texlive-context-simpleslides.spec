@@ -46,6 +46,7 @@ styles are configurable, and it is easy to design new styles.
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/scripts/context/lua/third/simpleslides/mtx-simpleslides.lua
 %{_texmfdistdir}/tex/context/interface/third/t-simpleslides.xml
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-c-default.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-f-default.tex
@@ -113,4 +114,4 @@ styles are configurable, and it is easy to design new styles.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+cp -fpar scripts tex doc %{buildroot}%{_texmfdistdir}
