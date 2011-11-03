@@ -1,3 +1,9 @@
+# revision 24165
+# category ConTeXt
+# catalog-ctan /macros/context/contrib/context-simpleslides
+# catalog-date 2009-11-03 08:08:57 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-context-simpleslides
 Version:	20091103
 Release:	1
@@ -105,6 +111,7 @@ styles are configurable, and it is easy to design new styles.
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Sunrise.pdf
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Swoosh.pdf
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/ThickStripes.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -115,3 +122,5 @@ styles are configurable, and it is easy to design new styles.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar scripts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
