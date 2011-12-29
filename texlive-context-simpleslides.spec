@@ -18,8 +18,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 This Context module provides an easy-to-use interface for
@@ -30,24 +28,12 @@ mixed with the text of slides. The module provides several
 predefined styles, designed for academic presentation. Most
 styles are configurable, and it is easy to design new styles.
 
-%pre
-    %_texmf_mtxrun_pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_mtxrun_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_pre
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
-	%_texmf_mtxrun_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -111,7 +97,6 @@ styles are configurable, and it is easy to design new styles.
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Sunrise.pdf
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/Swoosh.pdf
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/styles/ThickStripes.pdf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -122,5 +107,3 @@ styles are configurable, and it is easy to design new styles.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar scripts tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
