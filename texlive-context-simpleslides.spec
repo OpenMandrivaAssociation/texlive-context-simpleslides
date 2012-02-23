@@ -1,12 +1,12 @@
-# revision 24165
+# revision 25389
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-simpleslides
-# catalog-date 2009-11-03 08:08:57 +0100
+# catalog-date 2012-02-13 08:38:17 +0100
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-context-simpleslides
-Version:	20091103
-Release:	2
+Version:	20120213
+Release:	1
 Summary:	A module for preparing presentations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simpleslides
@@ -63,6 +63,8 @@ styles are configurable, and it is easy to design new styles.
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Swoosh.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-ThickStripes.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-default.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/t-simpleslides.mkii
+%{_texmfdistdir}/tex/context/third/simpleslides/t-simpleslides.mkiv
 %{_texmfdistdir}/tex/context/third/simpleslides/t-simpleslides.tex
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/example.pdf
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/example.tex
