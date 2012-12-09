@@ -109,3 +109,22 @@ styles are configurable, and it is easy to design new styles.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar scripts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Feb 23 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120213-1
++ Revision: 779434
+- Update to latest release.
+
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091103-2
++ Revision: 750529
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091103-1
++ Revision: 718143
+- texlive-context-simpleslides
+- texlive-context-simpleslides
+- texlive-context-simpleslides
+- texlive-context-simpleslides
+- texlive-context-simpleslides
+
