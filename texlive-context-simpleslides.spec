@@ -1,16 +1,16 @@
-# revision 25389
+# revision 28300
 # category ConTeXt
-# catalog-ctan /macros/context/contrib/context-simpleslides
-# catalog-date 2012-02-13 08:38:17 +0100
-# catalog-license gpl
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
 # catalog-version undef
 Name:		texlive-context-simpleslides
-Version:	20120213
+Version:	20131012
 Release:	1
-Summary:	A module for preparing presentations
+Summary:	TeXLive context-simpleslides package
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simpleslides
-License:	GPL
+URL:		http://tug.org/texlive
+License:	http://www.tug.org/texlive/LICENSE.TL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-simpleslides.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-simpleslides.doc.tar.xz
 BuildArch:	noarch
@@ -20,13 +20,7 @@ Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
 
 %description
-This Context module provides an easy-to-use interface for
-creating presentations for use with a digital projector. The
-presentations are not interactive (no buttons, hyperlinks or
-navigational tools such as tables of contents). Graphics may be
-mixed with the text of slides. The module provides several
-predefined styles, designed for academic presentation. Most
-styles are configurable, and it is easy to design new styles.
+TeXLive context-simpleslides package.
 
 %post
     %{_sbindir}/texlive.post
@@ -50,6 +44,7 @@ styles are configurable, and it is easy to design new styles.
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Embossed.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-Framed.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-FramedTitle.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-FuzzyTopic.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-HorizontalStripes.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-NarrowStripes.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-PlainCounter.tex
@@ -65,7 +60,7 @@ styles are configurable, and it is easy to design new styles.
 %{_texmfdistdir}/tex/context/third/simpleslides/simpleslides-s-default.tex
 %{_texmfdistdir}/tex/context/third/simpleslides/t-simpleslides.mkii
 %{_texmfdistdir}/tex/context/third/simpleslides/t-simpleslides.mkiv
-%{_texmfdistdir}/tex/context/third/simpleslides/t-simpleslides.tex
+%{_texmfdistdir}/tex/context/third/simpleslides/t-slidesvisualcounter.tex
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/example.pdf
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/example.tex
 %doc %{_texmfdistdir}/doc/context/third/simpleslides/simpleslides.pdf
@@ -109,22 +104,3 @@ styles are configurable, and it is easy to design new styles.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar scripts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Feb 23 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120213-1
-+ Revision: 779434
-- Update to latest release.
-
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091103-2
-+ Revision: 750529
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091103-1
-+ Revision: 718143
-- texlive-context-simpleslides
-- texlive-context-simpleslides
-- texlive-context-simpleslides
-- texlive-context-simpleslides
-- texlive-context-simpleslides
-
