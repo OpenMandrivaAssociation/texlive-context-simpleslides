@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-simpleslides
 Version:	20120213
-Release:	1
+Release:	2
 Summary:	A module for preparing presentations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-simpleslides
