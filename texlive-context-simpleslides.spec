@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-simpleslides
 Version:	20131012
-Release:	6
+Release:	7
 Summary:	TeXLive context-simpleslides package
 Group:		Publishing
 URL:		http://tug.org/texlive
