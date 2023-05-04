@@ -1,6 +1,6 @@
 Name:		texlive-context-simpleslides
-Version:	63903
-Release:	2
+Version:	66855
+Release:	1
 Summary:	TeXLive context-simpleslides package
 Group:		Publishing
 URL:		http://tug.org/texlive
