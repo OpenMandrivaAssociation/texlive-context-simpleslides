@@ -1,5 +1,5 @@
 Name:		texlive-context-simpleslides
-Version:	66855
+Version:	67070
 Release:	1
 Summary:	TeXLive context-simpleslides package
 Group:		Publishing
